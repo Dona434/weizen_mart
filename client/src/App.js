@@ -7,7 +7,9 @@ import Signup from "./Components/Signup/Signup";
 import { useEffect, createContext, useReducer } from "react";
 import { reducer, initialState } from "./Reducers/UserReducer";
 import Admin from "./Components/Admin/Admin";
-import UserList from "./Components/Admin/src/Pages/UserList"
+import UserList from "./Components/Admin/src/Pages/UserList";
+import Product from "./Components/Pages/Product";
+import {ProductList} from "./Components/Pages/ProductList";
 
 export const UserContext = createContext();
 const App = () => {
@@ -33,6 +35,8 @@ const App = () => {
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
         <Route path="users" element={<UserList/>}/>
+        <Route path='productlist/product' element={<Product/>}/>
+        <Route path="productlist" element={<ProductList/>}/>
       </Routes>
     </UserContext.Provider>
   );

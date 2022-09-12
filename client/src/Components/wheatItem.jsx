@@ -41,18 +41,18 @@ cursor:pointer;
 font-weight:600px;
 `;
 
-const CategoryItem = ({item}) => {
+const WheatItem = ({item}) => {
   return (
   <Container>
-        <Link to={'productlist'}>
+          <Link to={"product"}>
             <Image src={item.img}/>
             <Info>
                 <Title>{item.title}</Title>
-                <Button>SHOP NOW</Button>
+                <Button>BUY NOW</Button>
             </Info>
             </Link>
     </Container>
   );
 };
 
-export default CategoryItem;
+export default WheatItem;

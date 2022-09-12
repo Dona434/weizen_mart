@@ -28,17 +28,17 @@ const Login = () => {
         } else if (data.user.usertype === "Customer") {
           localStorage.setItem("jwt", data.token);
           localStorage.setItem("user", JSON.stringify(data.user));
-          toast.success("SignedIn Successfully");
+          toast("SignedIn Successfully");
           navigate("/");
         } else if (data.user.usertype === "Farmer") {
           localStorage.setItem("jwt", data.token);
           localStorage.setItem("user", JSON.stringify(data.user));
-          toast.success("SignedIn Successfully");
+          toast("SignedIn Successfully");
           navigate("/farmer");
         } else if (data.user.usertype === "Admin") {
           localStorage.setItem("jwt", data.token);
           localStorage.setItem("user", JSON.stringify(data.user));
-          toast.success("SignedIn Successfully");
+          toast("SignedIn Successfully");
           navigate("/admin");
         } else {
           console.log("error");

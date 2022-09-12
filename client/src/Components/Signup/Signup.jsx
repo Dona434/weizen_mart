@@ -15,6 +15,7 @@ const Signup = () => {
   const [password, setpassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   const [usertype, SetUsertype] = useState("");
+
   const postData = () => {
     console.log(usertype);
     if (!/^[A-Za-z.-]+(\s*[A-Za-z.-]+)*$/.test(firstName)) {
