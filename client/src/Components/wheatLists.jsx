@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
-import { categories } from '../data';
+import { wheats } from '../data';
 import WheatItem from './wheatItem';
 
 const Container = styled.div`
@@ -10,14 +10,21 @@ flex-wrap:wrap;
 justify-content:space-between;
 `;
 
-const wheatLists = () => {
+const WheatLists = () => {
+  const [cart,setCart] = useState([]);
+  const handleClick = (item)=>{
+    setCart([...cart,item])
+    console.log(cart);
+  }
   return (
   <Container>
-    {categories.map(item=>(
-        <WheatItem item={item} key={item.id}/>
+    
+    {wheats.map((item)=>(
+        <WheatItem item={item} key={item.id} handleClick={handleClick}/>
     ))}
+    
    </Container>
   );
 };
 
-export default wheatLists;
+export default WheatLists;

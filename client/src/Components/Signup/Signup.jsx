@@ -53,9 +53,27 @@ const Signup = () => {
         console.log(data);
         if (data.error) {
           M.toast({ html: data.error, classes: "#d32f2f red darken-2" });
+          toast.error(data.error, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         } else {
           M.toast({ html: data.message, classes: "#388e3c green darken-2 " });
-          navigate("/login");
+          toast.success(data.message, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          setTimeout(() => navigate("/login"), 3500);
         }
       })
       .catch((err) => {

@@ -5,7 +5,7 @@ import Newsletter from '../Newsletter';
 import Footer from '../Footer';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-
+import { Link } from 'react-router-dom';
 
 const Container = styled.div``;
 
@@ -101,6 +101,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 margin:0px 5px;
+font-size:15px;
 `;
 
 const Button = styled.button`
@@ -163,7 +164,9 @@ const Product = () => {
                         <Amount>1</Amount>
                         <AddIcon/>
                     </AmountContainer>
+                    <Link to="cart" >
                     <Button>ADD TO CART</Button>
+                    </Link>
                 </AddContainer>
             </InfoContainer>
         </Wrapper>

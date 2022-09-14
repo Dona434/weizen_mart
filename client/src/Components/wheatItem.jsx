@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, createContext, useReducer } from "react";
 import { reducer, initialState } from "../Reducers/UserReducer";
-
-
 
 const Container = styled.div`
 flex:1;
@@ -13,43 +11,47 @@ height:70vh;
 position:relative;
 `;
 const Image = styled.img`
-width:100%;
-height:100%;
+width:50%;
+height:50%;
 object-fit:cover;
+border-radius:20%;
 `;
-const Info = styled.div`
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-`;
-const Title = styled.h1`
-color:white;
-margin-bottom:20px;
-`;
+
 const Button = styled.button`
 border:none;
 padding:10px;
-background-color:white;
+background-color: #ffff66;
 color:grey;
 cursor:pointer;
+margin-left:50px;
 font-weight:600px;
 `;
 
-const WheatItem = ({item}) => {
+const Title = styled.h3`
+padding:5px;
+margin-left:30px;
+font-weight:10px;
+`;
+
+const Price = styled.h4`
+padding:5px;
+margin-left:50px;
+font-weight:10px;
+`;
+
+const WheatItem = ({item,handleClick}) => {
+  const{id,title,img,price} = item;
   return (
   <Container>
-          <Link to={"product"}>
-            <Image src={item.img}/>
-            <Info>
-                <Title>{item.title}</Title>
-                <Button>BUY NOW</Button>
-            </Info>
+            <Image src={img}/>
+            <Title>
+              {title} 
+            </Title>
+            <Price>
+            Price : {price}
+            </Price>
+            <Link to={"cart"}>
+            <Button onClick={()=>handleClick(item)}>Add To Cart</Button>
             </Link>
     </Container>
   );

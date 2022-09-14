@@ -28,18 +28,21 @@ export const categories = [
     id:1,
     img:"https://images.fineartamerica.com/images-medium-large-5/emmer-wheat-grains-marv-vandehey.jpg",
     title:"EMMER WHEAT",
+    price:75,
     cat:"emmer"
 },
 {
     id:2,
     img:"https://cdn.shopify.com/s/files/1/0016/8286/6235/products/Organic-Whole-Hard-Red-Winter-Wheat_1024x1024@2x.jpg?v=1626128606",
     title:"RED WINTER WHEAT",
+    price:21.5,
     cat:"redwinter"
 },
 {
     id:3,
     img:"https://5.imimg.com/data5/SELLER/Default/2021/9/DO/PD/CZ/80513067/organic-black-wheat-seeds-1000x1000.jpg",
     title:"BLACK WHEAT",
+    price:55,
     cat:"black"
 },
 {
@@ -96,3 +99,29 @@ export const popularProducts = [
     img:"https://img3.21food.com/img/product/2020/11/23/food305244-1606098165320681.jpg"
 }
 ];
+
+export const wheats = [
+    {
+        id:1,
+        img:"https://images.fineartamerica.com/images-medium-large-5/emmer-wheat-grains-marv-vandehey.jpg",
+        title:"EMMER WHEAT",
+        price:75,
+        cat:"emmer"
+    },
+    {
+        id:2,
+        img:"https://cdn.shopify.com/s/files/1/0016/8286/6235/products/Organic-Whole-Hard-Red-Winter-Wheat_1024x1024@2x.jpg?v=1626128606",
+        title:"RED WINTER WHEAT",
+        price:21.5,
+        cat:"redwinter"
+    },
+    {
+        id:3,
+        img:"https://5.imimg.com/data5/SELLER/Default/2021/9/DO/PD/CZ/80513067/organic-black-wheat-seeds-1000x1000.jpg",
+        title:"BLACK WHEAT",
+        price:55,
+        cat:"black"
+    },
+    
+    ];
+    

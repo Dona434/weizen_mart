@@ -10,6 +10,9 @@ import Admin from "./Components/Admin/Admin";
 import UserList from "./Components/Admin/src/Pages/UserList";
 import Product from "./Components/Pages/Product";
 import {ProductList} from "./Components/Pages/ProductList";
+import Cart from "./Cart/Cart";
+import AddProducts from "./Components/farmer/AddProducts";
+import Basket from "./Components/Basket";
 
 export const UserContext = createContext();
 const App = () => {
@@ -37,6 +40,10 @@ const App = () => {
         <Route path="users" element={<UserList/>}/>
         <Route path='productlist/product' element={<Product/>}/>
         <Route path="productlist" element={<ProductList/>}/>
+        <Route path="productlist/cart" element={<Cart/>}/>
+        <Route path="productlist" element={<ProductList/>}/>
+        <Route path="farmer/addproducts" element={<AddProducts/>}/>
+        
       </Routes>
     </UserContext.Provider>
   );
